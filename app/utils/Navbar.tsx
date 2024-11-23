@@ -72,11 +72,11 @@ export default function Navbar() {
     <div
       className={`${
         active
-          ? " dark:white fixed top-0 left-0  w-full h-[80px] z-[80]  shadow-xl transition duration-500"
-          : "w-full  h-[80px] z-[80] "
+          ? " dark:bg-white fixed top-0 left-0  w-full z-40  shadow-xl transition duration-500"
+          : "w-full  z-40 "
       }`}
     >
-      <header className="flex flex-row justify-between mx-auto align-middle h-16 w-full shrink-0 items-center px-4 md:px-6 font-kanit">
+      <header className="flex flex-row justify-between mx-auto align-middle h-16 w-full shrink-0 items-center px-4 md:px-6 font-kanit bg-white dark:bg-gray-800">
         <Link href={"/"}>
           <h2 className="text-3xl ">EduConnect</h2>
         </Link>
@@ -103,9 +103,9 @@ export default function Navbar() {
                   {data.path ? (
                     <Link
                       href={data.path}
-                      className={`group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-kanit ${
+                      className={`group inline-flex h-9 w-max items-center justify-center rounded-md text-lg bg-white dark:bg-gray-800 px-4 py-2 font-kanit ${
                         isActive(data.path)
-                          ? "text-pink-500"
+                          ? "text-blue-500"
                           : "text-black dark:text-white"
                       }  `}
                       prefetch={false}
@@ -131,9 +131,9 @@ export default function Navbar() {
               {data.path ? (
                 <Link
                   href={data.path}
-                  className={`group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 ${
+                  className={`group inline-flex h-9 w-max items-center justify-center rounded-md text-lg bg-white dark:bg-black px-4 py-2 ${
                     isActive(data.path)
-                      ? "text-pink-500"
+                      ? "text-blue-500"
                       : "text-black dark:text-white"
                   }  `}
                   prefetch={false}

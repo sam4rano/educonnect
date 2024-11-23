@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const SearchItem = () => {
   return (
-	<div>SearchItem</div>
-  )
-}
+    <div className="flex justify-center align-middle items-center">
+      <h2>SearchItem</h2>
+    </div>
+  );
+};
 
-export default SearchItem
+export default SearchItem;
