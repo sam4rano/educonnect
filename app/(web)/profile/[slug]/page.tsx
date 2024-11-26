@@ -2,7 +2,7 @@ import React from 'react'
 
 const page = () => {
   return (
-	<div>tagged page</div>
+	<div>slug of slug page</div>
   )
 }
 
