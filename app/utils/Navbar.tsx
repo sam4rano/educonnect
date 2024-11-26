@@ -28,11 +28,16 @@ const navData: NavData[] = [
   },
   {
     id: 3,
-    name: "Record",
-    path: "/record",
+    name: "Tags",
+    path: "/tags",
   },
   {
     id: 4,
+    name: "Questions",
+    path: "/questions",
+  },
+  {
+    id: 5,
     name: "Sign In",
     path: "/sign-in",
   },

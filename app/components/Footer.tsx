@@ -22,8 +22,8 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 sm:text-sm">
               <li><a href="/about" className="hover:underline">About Us</a></li>
-              <li><a href="/services" className="hover:underline">Our Services</a></li>
-              <li><a href="/partners" className="hover:underline">Partners</a></li>
+              <li><a href="/subject" className="hover:underline">Subject</a></li>
+              <li><a href="/questions" className="hover:underline">Questions</a></li>
               <li><a href="/contact" className="hover:underline">Contact Us</a></li>
               <li><a href="/careers" className="hover:underline">Careers</a></li>
             </ul>
@@ -37,33 +37,33 @@ const Footer: React.FC = () => {
             <p className="mb-2">
               Phone: 
               <a 
-                href="tel:+1234567890" 
+                href="tel:+2348064427860" 
                 className="hover:underline ml-1"
                 title="Call us"
               >
-                (123) 456-7890
+               (+234) 8064427860
               </a>
             </p>
             <p className="mb-2">
               WhatsApp: 
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/2348064427860" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:underline ml-1"
                 title="Chat with us on WhatsApp"
               >
-                (123) 456-7890
+                (+234) 8064427860
               </a>
             </p>
             <p>
               Email: 
               <a 
-                href="mailto:info@company.com" 
+                href="mailto:info@educonnect.com" 
                 className="hover:underline ml-1"
                 title="Send us an email"
               >
-                info@civictrack.com
+                info@educonnect.com
               </a>
             </p>
           </div>
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-4 flex md:flex-row items-center justify-between w-full flex-row sm:text-sm">
-          <p>&copy; {new Date().getFullYear()} CivicTrack. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} EduConnect. All rights reserved.</p>
           <ul className="flex space-x-2 mt-4 md:mt-0">
             <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>
             <li><a href="/terms-of-service" className="hover:underline">Terms of Service</a></li>
