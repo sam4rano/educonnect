@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -21,11 +22,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 sm:text-sm">
-              <li><a href="/about" className="hover:underline">About Us</a></li>
-              <li><a href="/subject" className="hover:underline">Subject</a></li>
-              <li><a href="/questions" className="hover:underline">Questions</a></li>
-              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
-              <li><a href="/careers" className="hover:underline">Careers</a></li>
+              <li><Link href="/about" className="hover:underline">About Us</Link></li>
+              <li><Link href="/subject" className="hover:underline">Subject</Link></li>
+              <li><Link href="/questions" className="hover:underline">Questions</Link></li>
+              <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
+              <li><Link href="/careers" className="hover:underline">Careers</Link></li>
             </ul>
           </div>
 
@@ -36,17 +37,17 @@ const Footer: React.FC = () => {
             <p className="mb-2">City, State, Zip Code</p>
             <p className="mb-2">
               Phone: 
-              <a 
+              <Link 
                 href="tel:+2348064427860" 
                 className="hover:underline ml-1"
                 title="Call us"
               >
                (+234) 8064427860
-              </a>
+              </Link>
             </p>
             <p className="mb-2">
               WhatsApp: 
-              <a 
+              <Link 
                 href="https://wa.me/2348064427860" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -54,17 +55,17 @@ const Footer: React.FC = () => {
                 title="Chat with us on WhatsApp"
               >
                 (+234) 8064427860
-              </a>
+              </Link>
             </p>
             <p>
               Email: 
-              <a 
+              <Link 
                 href="mailto:info@educonnect.com" 
                 className="hover:underline ml-1"
                 title="Send us an email"
               >
                 info@educonnect.com
-              </a>
+              </Link>
             </p>
           </div>
         </div>
@@ -73,8 +74,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 pt-4 flex md:flex-row items-center justify-between w-full flex-row sm:text-sm">
           <p>&copy; {new Date().getFullYear()} EduConnect. All rights reserved.</p>
           <ul className="flex space-x-2 mt-4 md:mt-0">
-            <li><a href="/privacy-policy" className="hover:underline">Privacy Policy</a></li>
-            <li><a href="/terms-of-service" className="hover:underline">Terms of Service</a></li>
+            <li><Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link></li>
+            <li><Link href="/terms-of-service" className="hover:underline">Terms of Service</Link></li>
           </ul>
         </div>
       </div>

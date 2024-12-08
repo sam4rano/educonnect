@@ -38,8 +38,8 @@ const navData: NavData[] = [
   },
   {
     id: 5,
-    name: "Sign In",
-    path: "/sign-in",
+    name: "Register",
+    path: "/register",
   },
   {
     id: 6,

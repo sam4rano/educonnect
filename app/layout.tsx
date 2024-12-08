@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/app/utils/theme-provider";
 import { Kanit, Montserrat } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
+import { Providers } from "./Provider";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
@@ -27,10 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${montserrat.variable} ${kanit.variable} antialiased`}
-      >
-         <ThemeProvider
+      <body className={`${montserrat.variable} ${kanit.variable} antialiased`}>
+        <Providers>
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
@@ -38,6 +41,9 @@ export default function RootLayout({
           >
             {children}
           </ThemeProvider>
+          <ToastContainer />
+        </Providers>
+        {/* <SessionProvider></SessionProvider> */}
       </body>
     </html>
   );
