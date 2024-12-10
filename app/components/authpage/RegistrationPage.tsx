@@ -1,12 +1,9 @@
 "use client";
-
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { withZodSchema } from "formik-validator-zod";
 import { z } from "zod";
-import { useRegisterMutation } from "@/redux/features/auth/authApi";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store"; // Adjust according to your store setup
+ // Adjust according to your store setup
 import { styles } from "@/app/style/styles";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -36,12 +33,11 @@ const fieldDefinitions = [
   { name: "email", label: "Email", type: "email" },
   { name: "username", label: "Username", type: "text" },
   { name: "password", label: "Password", type: "password" },
+  { name: "phone", label: "Phone", type: "phone" },
 ];
 
 const RegistrationPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [register] = useRegisterMutation();
-  const user = useSelector((state: RootState) => state.auth.user);
 
   const formik = useFormik<RegisterFormSchemaType>({
     initialValues: {
@@ -49,11 +45,11 @@ const RegistrationPage = () => {
       email: "",
       username: "",
       password: "",
+      phone:"",
     },
     onSubmit: async (values, { resetForm }) => {
       setIsSubmitting(true);
       try {
-        await register(values).unwrap();
         toast.success("Registration successful!");
         resetForm();
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -69,22 +65,22 @@ const RegistrationPage = () => {
     validate: withZodSchema(RegisterFormSchema),
   });
 
-  if (user) {
-    return (
-      <div className="w-full max-w-md mx-auto p-6 bg-white shadow-md rounded-md text-center">
-        <h2 className={`${styles.title}`}>Registration Successful!</h2>
-        <p>Welcome, {user.fullName}!</p>
-        <p className="mt-2 text-gray-600">Your account has been created.</p>
-      </div>
-    );
-  }
+  // if (user) {
+  //   return (
+  //     <div className="w-full max-w-md mx-auto p-6 bg-white shadow-md rounded-md text-center">
+  //       <h2 className={`${styles.title}`}>Registration Successful!</h2>
+  //       <p>Welcome, {user.fullName}!</p>
+  //       <p className="mt-2 text-gray-600">Your account has been created.</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <>
       <ToastContainer />
 
-      <form onSubmit={formik.handleSubmit} className="w-full max-w-md mx-auto">
-        <h2 className={`${styles.title} text-center`}>Sign Up</h2>
+      <form onSubmit={formik.handleSubmit} className="w-full max-w-md mx-auto py-6">
+        <h2 className={`${styles.title} text-center`}>Login to Educonnect</h2>
         <div className="flex flex-col gap-4 p-6 bg-white shadow-md rounded-md">
           {fieldDefinitions.map(({ name, label, type }) => (
             <div key={name} className="form-group">

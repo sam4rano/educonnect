@@ -4,11 +4,16 @@ export interface CreateUserRequest {
 	email: string;
 	username: string;
 	password: string;
+	phone: string
   }
   
   export interface LoginRequest {
 	logInID: string; // Assuming the email is used for login
 	password: string;
+  }
+
+  export interface confirmEmail {
+	email: string;
   }
   
   // Response Interfaces

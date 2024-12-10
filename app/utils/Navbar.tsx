@@ -128,7 +128,7 @@ export default function Navbar() {
           </SheetContent>
         </Sheet>
         <Link href={"/"} className="mr-6 hidden xl:flex" prefetch={false}>
-          <span className="sr-only text-3xl">EduConnect</span>
+          <span className="sr-only text-3xl">eduConnect</span>
         </Link>
         <nav className="ml-auto hidden xl:flex lg:flex gap-6">
           {navData.map((data) => (

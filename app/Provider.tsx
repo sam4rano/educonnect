@@ -1,6 +1,7 @@
 "use client";
-import { store } from "@/redux/store";
-import { Provider } from "react-redux";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 interface ProvidersProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -9,8 +10,6 @@ interface ProvidersProps {
 
 export function Providers({ children }: ProvidersProps) {
   return (
-    <>
-      <Provider store={store}>{children}</Provider>
-    </>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 }

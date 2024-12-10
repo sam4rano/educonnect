@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/app/utils/theme-provider";
 import { Kanit, Montserrat } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
 import { Providers } from "./Provider";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
